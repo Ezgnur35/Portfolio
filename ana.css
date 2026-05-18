@@ -1,0 +1,359 @@
+/* GENEL AYARLAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #FFF5F7 0%, #FFE5EC 100%);
+  color: #333;
+}
+
+/* MENU */
+.menu {
+  background: linear-gradient(90deg, #FF9EB5 0%, #FFB3C6 100%);
+  padding: 15px 0;
+  box-shadow: 0 3px 10px rgba(255, 105, 180, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu-kapsayici {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-resim {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s;
+}
+
+.logo-resim:hover {
+  transform: scale(1.05);
+}
+
+.menu-liste {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.menu-liste a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu-liste a:hover {
+  color: #FF1493;
+}
+
+/* HERO BÖLÜMÜ */
+.hero-bolum {
+  text-align: center;
+  padding: 80px 20px;
+  background: url('nav_arka_koy.jpg') center/cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero-bolum::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 182, 193, 0.75);
+}
+
+.hero-bolum * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 30px;
+  animation: yuzenLogo 3s ease-in-out infinite;
+}
+
+@keyframes yuzenLogo {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.hero-baslik {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-yazi {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 35px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.siparis-buton {
+  display: inline-block;
+  background: #FF69B4;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s;
+}
+
+.siparis-buton:hover {
+  background: #FF1493;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+  color: white;
+}
+
+/* PASTALAR BÖLÜMÜ */
+.pastalar-bolum {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bolum-baslik {
+  text-align: center;
+  color: #FF69B4;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.pasta-kart {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  background: white;
+}
+
+.pasta-kart:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: #FF69B4;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.kart-alt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.fiyat {
+  color: #FF69B4;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.buton-kucuk {
+  background: #FF69B4;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.buton-kucuk:hover {
+  background: #FF1493;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* İLETİŞİM BÖLÜMÜ */
+.iletisim-bolum {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.iletisim-kutu {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.bilgi-satir {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.bilgi-satir .ikon {
+  font-size: 1.5rem;
+  min-width: 30px;
+}
+
+.bilgi-satir p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.sosyal-medya {
+  text-align: center;
+}
+
+.sosyal-medya h3 {
+  color: #FF69B4;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.sosyal-ikonlar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.sosyal-ikonlar a {
+  display: inline-block;
+  background: #FF69B4;
+  padding: 12px 30px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s;
+  min-width: 150px;
+}
+
+.sosyal-ikonlar a:hover {
+  background: #FF1493;
+  transform: scale(1.05);
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  background: linear-gradient(90deg, #FF9EB5 0%, #FFB3C6 100%);
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 60px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* RESPONSİVE TASARIM */
+@media (max-width: 500px) {
+  .menu-kapsayici {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo-resim {
+    height: 50px;
+  }
+  
+  .menu-liste {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .menu-liste a {
+    font-size: 0.95rem;
+  }
+  
+  .hero-logo {
+    width: 100px;
+  }
+  
+  .hero-baslik {
+    font-size: 2rem;
+  }
+  
+  .hero-yazi {
+    font-size: 1.1rem;
+  }
+  
+  .siparis-buton {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+  
+  .bolum-baslik {
+    font-size: 1.8rem;
+  }
+  
+  .iletisim-kutu {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    gap: 30px;
+  }
+  
+  .bilgi-satir {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .card-img-top {
+    height: 200px;
+  }
+}

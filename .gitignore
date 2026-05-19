@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# build profiling
+undefined/
+*.cpuprofile
+
+# temp/test files
+public/cv-en2.pdf
+public/cv-en-test.pdf
+public/cv_en.pdf
+public/cven.pdf
+public/CV/ezginur-cv-en.pdf
+public/CV/ezginur-cv-tr.pdf
+CV'LER - Kopya/

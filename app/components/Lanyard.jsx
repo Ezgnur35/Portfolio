@@ -337,7 +337,7 @@ export default function Lanyard() {
 
               <div className="badge-info">
                 <div className="badge-name">Ezginur</div>
-                <div className="badge-role">Frontend Developer</div>
+                <div className="badge-role">Junior Developer</div>
                 <div className="badge-code">WEB · UI · GAME</div>
               </div>
 

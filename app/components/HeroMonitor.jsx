@@ -439,7 +439,7 @@ export default function HeroMonitor() {
                     </div>
                     <div className="desc">
                       {lang === "tr"
-                        ? <>"İzmir'de bilgisayar programcılığı okuyan,<br />web &amp; mobil geliştirme tutkunu junior developer."</>
+                        ? <>"İzmir'de bilgisayar programcılığı okuyan,<br />web &amp; oyun geliştirme tutkunu junior developer."</>
                         : <>A junior developer passionate about<br />web &amp; mobile development, based in İzmir.</>
                       }
                     </div>
@@ -458,14 +458,27 @@ export default function HeroMonitor() {
                         >
                           {t(T.hero_cv_btn, lang)}
                         </button>
-                        <div className={`cv-dropdown ${cvOpen ? "open" : ""}`}>
-                          <a href="/cv-tr.pdf" download className="cv-option" onClick={() => setCvOpen(false)}>
-                            <span className="cv-flag">🇹🇷</span> {t(T.hero_cv_tr, lang)}
-                          </a>
-                          <a href="/cv-en.pdf" download className="cv-option" onClick={() => setCvOpen(false)}>
-                            <span className="cv-flag">🇬🇧</span> {t(T.hero_cv_en, lang)}
-                          </a>
-                        </div>
+                   <div className={`cv-dropdown ${cvOpen ? "open" : ""}`}>
+  <a
+    href="/CV/cv-tr.pdf"
+    download="Ezginur_Unver_TR_CV.pdf"
+    className="cv-option"
+    onClick={() => setCvOpen(false)}
+  >
+    <span className="cv-flag">🇹🇷</span>
+    {t(T.hero_cv_tr, lang)}
+  </a>
+
+  <a
+    href="/CV/cv-en.pdf"
+    download="Ezginur_Unver_EN_CV.pdf"
+    className="cv-option"
+    onClick={() => setCvOpen(false)}
+  >
+    <span className="cv-flag">🇬🇧</span>
+    {t(T.hero_cv_en, lang)}
+  </a>
+</div>
                       </div>
                     </div>
                   </div>
